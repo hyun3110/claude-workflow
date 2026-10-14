@@ -1,0 +1,278 @@
+{
+  "_주석": "공유본: 스킬 라우터가 없으므로 설명 축약은 빼고, 숨김(_hide)·합침(_merge)과 대표 스킬 설명만 둔다. 대표 설명에 '합친 기능'이 적혀 있어야 모델이 흡수된 기능을 안다.",
+  "claude-seo": {
+    "seo": "SEO 단일 진입점 — 전체 감사(audit)·AI 검색(GEO)·page·technical·schema·sitemap·content·local 등 26개 명령. 하위 절차는 '합쳐진 기능' 절의 경로를 Read 한다. Say: SEO, audit, GEO."
+  },
+  "claude-mem": {
+    "timeline-report": "Narrative report of a project's development history from the claude-mem timeline. 합친 기능: 주 단위 다이제스트(weekly-digests)."
+  },
+  "taste-skill": {
+    "taste-skill": "Anti-slop frontend for landing pages, portfolios, redesigns. Infers design direction. 합친 기능: 미니멀·브루탈·소프트·GPT·v1 스타일 프리셋과 리디자인."
+  },
+  "ponytail": {
+    "ponytail-audit": "과설계·군살 점검 단일 진입점 — 변경분 리뷰(ponytail-review), 저장소 전체 감사, 미뤄 둔 shortcut 부채 장부(ponytail-debt)."
+  },
+  "_local": {
+    "review-animations": "모션 품질 판정 — 변경분 리뷰, 코드베이스 전체 모션 감사·개선계획(improve-animations), 모션 넣을 곳 찾기(find-animation-opportunities).",
+    "web-quality-audit": "웹 품질 단일 진입점 — 성능(LCP·INP·CLS), 접근성(WCAG 2.2), SEO, 보안·모범사례를 감사하고 영역별로 고친다. Say: audit my site, lighthouse, 느림, 접근성."
+  },
+  "understand-anything": {
+    "understand": "Analyze a codebase into an interactive knowledge graph of architecture and components. 합친 기능: 신규 입사자 온보딩 가이드(understand-onboard), 비즈니스 도메인 흐름 그래프(understand-domain).",
+    "understand-explain": "Deep-dive explanation of a file, function, or module. 합친 기능: 지식 그래프에 코드 질문하기(understand-chat)."
+  },
+  "superpowers": {
+    "verification-before-completion": "MUST run before claiming work is done, fixed, or passing — verify with commands, not assertion. 합친 기능: 범위 넓히지 않고 증명 후 멈춤(verify-and-stop).",
+    "systematic-debugging": "Use for any bug, test failure, or unexpected behavior before proposing fixes — root cause first. 합친 기능: 원인 먼저 조사(investigate-first), 최소 범위 수정(surgical-patch).",
+    "writing-plans": "Use when you have a spec or requirements for a multi-step task, before touching code. 합친 기능: 문서 먼저 찾는 계획(make-plan), 과잉 구현 방지(lean-build).",
+    "subagent-driven-development": "Execute an implementation plan with subagents in this session. 합친 기능: 서로 독립인 작업 2개 이상을 병렬 에이전트로 나눔(dispatching-parallel-agents)."
+  },
+  "frontend-design": {
+    "frontend-design": "Distinctive visual design for new or reshaped UI — aesthetic direction, typography, avoiding templated defaults. 합친 기능: 에밀식 디테일·폴리시(emil-design-eng)."
+  },
+  "claude-md-management": {
+    "revise-claude-md": "Update CLAUDE.md with learnings from this session. 합친 기능: CLAUDE.md 품질 점수표 감사(claude-md-improver)."
+  },
+  "_hide": {
+    "_주석": "흡수된 쪽·뺀 쪽에 disable-model-invocation: true 를 건다 — 모델 목록에서 빠지고 /이름 직접 호출은 그대로. 무엇을 왜: 저장소 README 의 스킬 통합 절.",
+    "_local": [
+      "emil-design-eng",
+      "improve-animations",
+      "find-animation-opportunities",
+      "core-web-vitals",
+      "best-practices",
+      "seo",
+      "task-observer",
+      "performance",
+      "accessibility"
+    ],
+    "code-review": [
+      "code-review"
+    ],
+    "commit-commands": [
+      "clean_gone"
+    ],
+    "caveman": [
+      "caveman",
+      "caveman-review",
+      "caveman-commit",
+      "cavecrew",
+      "caveman-explore",
+      "caveman-stats",
+      "caveman-compress",
+      "caveman-help",
+      "caveman-init",
+      "caveman-learn",
+      "caveman-setup",
+      "caveman-discover",
+      "caveman-evidence-review",
+      "caveman-manage",
+      "caveman-optimize",
+      "investigate-first",
+      "lean-build",
+      "surgical-patch",
+      "verify-and-stop"
+    ],
+    "ponytail": [
+      "ponytail",
+      "ponytail-review",
+      "ponytail-gain",
+      "ponytail-help",
+      "ponytail-debt"
+    ],
+    "superpowers": [
+      "using-superpowers",
+      "requesting-code-review",
+      "dispatching-parallel-agents",
+      "diagnosing-superpowers"
+    ],
+    "codex": [
+      "rescue",
+      "setup",
+      "codex-result-handling"
+    ],
+    "claude-mem": [
+      "make-plan",
+      "do",
+      "handoff",
+      "what-the",
+      "learn-codebase",
+      "smart-explore",
+      "how-it-works",
+      "weekly-digests",
+      "knowledge-agent",
+      "ccs-align",
+      "mode-creator",
+      "cloud-sync",
+      "screenpipe",
+      "agent-cost-report",
+      "version-bump",
+      "wowerpoint"
+    ],
+    "understand-anything": [
+      "understand-chat",
+      "understand-knowledge",
+      "understand-onboard",
+      "understand-domain"
+    ],
+    "km": [
+      "setup",
+      "knowledge-manager-setup",
+      "km-update"
+    ],
+    "cc-codex-lessons": [
+      "lesson-help"
+    ],
+    "claude-md-management": [
+      "claude-md-improver"
+    ],
+    "claude-code-setup": [
+      "claude-automation-recommender"
+    ],
+    "hookify": [
+      "configure",
+      "list",
+      "help"
+    ],
+    "taste-skill": [
+      "design-taste-frontend-v1",
+      "gpt-taste",
+      "high-end-visual-design",
+      "minimalist-ui",
+      "industrial-brutalist-ui",
+      "redesign-existing-projects",
+      "image-to-code",
+      "imagegen-frontend-web",
+      "imagegen-frontend-mobile",
+      "brandkit",
+      "stitch-design-taste"
+    ],
+    "claude-seo": [
+      "seo-page",
+      "seo-schema",
+      "seo-sitemap",
+      "seo-technical",
+      "seo-content",
+      "seo-agentic",
+      "seo-sxo",
+      "seo-hreflang",
+      "seo-local",
+      "seo-plan",
+      "seo-programmatic",
+      "seo-competitor-pages",
+      "seo-content-brief",
+      "seo-cluster",
+      "seo-flow",
+      "seo-ecommerce",
+      "seo-images",
+      "seo-google",
+      "seo-backlinks",
+      "seo-drift",
+      "seo-dataforseo",
+      "seo-image-gen",
+      "seo-maps",
+      "seo-audit",
+      "seo-geo"
+    ]
+  },
+  "_merge": {
+    "_주석": "겹치거나 같이 쓰면 나은 스킬을 대표 하나에 합친다 — 대표 SKILL.md 끝에 '합쳐진 기능' 절(작은 건 본문 통째, 큰 건 절차 파일 경로)을 붙인다. 흡수된 쪽은 _hide 로 목록에서 뺀다.",
+    "superpowers": {
+      "systematic-debugging": [
+        "caveman:investigate-first",
+        "caveman:surgical-patch"
+      ],
+      "writing-plans": [
+        "claude-mem:make-plan",
+        "caveman:lean-build"
+      ],
+      "subagent-driven-development": [
+        "superpowers:dispatching-parallel-agents"
+      ],
+      "verification-before-completion": [
+        "caveman:verify-and-stop"
+      ]
+    },
+    "understand-anything": {
+      "understand-explain": [
+        "understand-anything:understand-chat"
+      ],
+      "understand": [
+        "understand-anything:understand-onboard",
+        "understand-anything:understand-domain"
+      ]
+    },
+    "_local": {
+      "web-quality-audit": [
+        "_local:performance",
+        "_local:core-web-vitals",
+        "_local:accessibility",
+        "_local:best-practices",
+        "_local:seo"
+      ],
+      "review-animations": [
+        "_local:improve-animations",
+        "_local:find-animation-opportunities"
+      ]
+    },
+    "claude-seo": {
+      "seo": [
+        "claude-seo:seo-audit",
+        "claude-seo:seo-geo",
+        "claude-seo:seo-page",
+        "claude-seo:seo-schema",
+        "claude-seo:seo-sitemap",
+        "claude-seo:seo-technical",
+        "claude-seo:seo-content",
+        "claude-seo:seo-agentic",
+        "claude-seo:seo-sxo",
+        "claude-seo:seo-hreflang",
+        "claude-seo:seo-local",
+        "claude-seo:seo-plan",
+        "claude-seo:seo-programmatic",
+        "claude-seo:seo-competitor-pages",
+        "claude-seo:seo-content-brief",
+        "claude-seo:seo-cluster",
+        "claude-seo:seo-flow",
+        "claude-seo:seo-ecommerce",
+        "claude-seo:seo-images",
+        "claude-seo:seo-google",
+        "claude-seo:seo-backlinks",
+        "claude-seo:seo-drift",
+        "claude-seo:seo-dataforseo",
+        "claude-seo:seo-image-gen",
+        "claude-seo:seo-maps"
+      ]
+    },
+    "frontend-design": {
+      "frontend-design": [
+        "_local:emil-design-eng"
+      ]
+    },
+    "taste-skill": {
+      "design-taste-frontend": [
+        "taste-skill:design-taste-frontend-v1",
+        "taste-skill:gpt-taste",
+        "taste-skill:high-end-visual-design",
+        "taste-skill:minimalist-ui",
+        "taste-skill:industrial-brutalist-ui",
+        "taste-skill:redesign-existing-projects"
+      ]
+    },
+    "ponytail": {
+      "ponytail-audit": [
+        "ponytail:ponytail-review",
+        "ponytail:ponytail-debt"
+      ]
+    },
+    "claude-md-management": {
+      "revise-claude-md": [
+        "claude-md-management:claude-md-improver"
+      ]
+    },
+    "claude-mem": {
+      "timeline-report": [
+        "claude-mem:weekly-digests"
+      ]
+    }
+  }
+}

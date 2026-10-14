@@ -1,0 +1,16 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-workflow",
+  "description": "총괄·worker 분담, 2패스 리뷰, '완료는 눌러 보고' 작업 방식과 스킬 묶음",
+  "owner": {
+    "name": "claude-workflow"
+  },
+  "plugins": [
+    {
+      "name": "workflow",
+      "description": "위험 명령 차단 훅 · 플랜 가이드 · 세션 컨텍스트 · 환경 점검(skill-check)",
+      "source": "./plugins/workflow",
+      "category": "productivity"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/session-context.py\"",
+            "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/trim-descriptions.py\" --check >/dev/null 2>&1 || echo \"[workflow] 스킬 숨김·합침 점검 실패 — 플러그인 업데이트로 풀렸거나 python3 문제. claude-workflow 설치 스크립트를 다시 돌리고 \\\"스킬 확인해\\\" 로 확인하세요.\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/guard-dangerous-bash.py\"",
+            "timeout": 10
+          }
+        ]
+      },
+      {
+        "matcher": "EnterPlanMode",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/plan-guidance.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

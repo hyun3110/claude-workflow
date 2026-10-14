@@ -1,0 +1,54 @@
+{
+  "_comment": "설치 목록 — install/install.ps1·install.sh 와 scripts/check.py 가 같이 읽는다. 플러그인·스킬을 더하거나 뺄 때 여기만 고친다.",
+  "marketplaces": {
+    "tofukyung-plugins": {"source": {"source": "git", "url": "https://github.com/treylom/tofukyung-plugins.git"}},
+    "caveman": {"source": {"source": "github", "repo": "JuliusBrussee/caveman"}},
+    "understand-anything": {"source": {"source": "github", "repo": "Egonex-AI/Understand-Anything"}},
+    "claude-video": {"source": {"source": "github", "repo": "bradautomates/claude-video"}},
+    "djfksjd": {"source": {"source": "github", "repo": "djfksjd/ir-search"}},
+    "openai-codex": {"source": {"source": "github", "repo": "openai/codex-plugin-cc"}},
+    "agricidaniel-claude-seo": {"source": {"source": "github", "repo": "AgriciDaniel/claude-seo"}},
+    "thedotmack": {"source": {"source": "github", "repo": "thedotmack/claude-mem"}},
+    "taste-skill": {"source": {"source": "github", "repo": "leonxlnx/taste-skill"}},
+    "ponytail": {"source": {"source": "github", "repo": "dietrichgebert/ponytail"}}
+  },
+  "plugins": [
+    "workflow@claude-workflow",
+    "caveman@caveman",
+    "cc-codex-lessons@tofukyung-plugins",
+    "claude-code-setup@claude-plugins-official",
+    "claude-md-management@claude-plugins-official",
+    "claude-mem@thedotmack",
+    "claude-seo@agricidaniel-claude-seo",
+    "code-review@claude-plugins-official",
+    "codex@openai-codex",
+    "commit-commands@claude-plugins-official",
+    "frontend-design@claude-plugins-official",
+    "hookify@claude-plugins-official",
+    "ir-search@djfksjd",
+    "km@tofukyung-plugins",
+    "ponytail@ponytail",
+    "security-guidance@claude-plugins-official",
+    "superpowers@claude-plugins-official",
+    "taste-skill@taste-skill",
+    "understand-anything@understand-anything",
+    "watch@claude-video"
+  ],
+  "local_skills": {
+    "_comment": "github: GitHub <owner/repo> 의 skills/<이름> 폴더를 git 으로 받아 복사한다(npx skills add 와 같은 결과지만 CLAUDE_CONFIG_DIR 을 따른다). 목록에 적은 것만 받는다.",
+    "github": {
+      "emilkowalski/skills": ["animate", "animate-expo", "animation-vocabulary", "apple-design", "ask-sonner", "emil-design-eng", "find-animation-opportunities", "improve-animations", "pick-ui-library", "prototype", "review-animations"],
+      "addyosmani/web-quality-skills": ["web-quality-audit", "performance", "core-web-vitals", "accessibility", "seo", "best-practices"]
+    },
+    "git": {
+      "task-observer": {"repo": "https://github.com/rebelytics/one-skill-to-rule-them-all.git", "path": ".", "copy": ["SKILL.md", "USER-GUIDE.md", "references", "scripts"]},
+      "arena": {"repo": "https://github.com/Jakeschincariol/arena-skill.git", "path": "skills/arena"},
+      "67": {"repo": "https://github.com/Jakeschincariol/claude-illegal-codes.git", "path": "67"},
+      "crash-out": {"repo": "https://github.com/Jakeschincariol/claude-illegal-codes.git", "path": "crash-out"},
+      "aura-farming": {"repo": "https://github.com/Jakeschincariol/claude-illegal-codes.git", "path": "aura-farming"},
+      "larp": {"repo": "https://github.com/Jakeschincariol/claude-illegal-codes.git", "path": "larp"}
+    },
+    "allow_model_invocation": ["review-animations", "pick-ui-library", "prototype"]
+  },
+  "settings_defaults": {"model": "opus", "effortLevel": "xhigh"}
+}

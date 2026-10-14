@@ -1,0 +1,5 @@
+{
+  "name": "workflow",
+  "version": "0.1.0",
+  "description": "위험 명령 차단 훅 · 플랜 가이드 · 세션 컨텍스트 · 스킬 숨김·합침 풀림 알림 · 환경 점검(skill-check). worker 에이전트·작업 규칙은 저장소 설치 스크립트가 넣는다"
+}

@@ -18,12 +18,12 @@ fi
 
 if [ -d "$dir/.git" ]; then
   echo "업데이트: $dir"
-  git -C "$dir" pull --ff-only
+  git -C "$dir" pull --ff-only -q
 elif [ -e "$dir" ]; then
   echo "✗ $dir 가 이미 있는데 git 저장소가 아닙니다. 옮기거나 CLAUDE_WORKFLOW_DIR 로 다른 위치를 지정하세요."
   exit 1
 else
-  git clone "$repo" "$dir"
+  git clone -q "$repo" "$dir"
 fi
 
 bash "$dir/install/install.sh"

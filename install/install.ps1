@@ -10,9 +10,9 @@ foreach ($t in 'git', 'claude') {
   }
 }
 $py = (Get-Command python -ErrorAction SilentlyContinue).Source
-if ($py) { & python -c "import sys; sys.exit(0 if sys.version_info >= (3, 10) else 1)" 2>$null }
+if ($py) { & python -c "import sys; sys.exit(0 if sys.version_info >= (3, 9) else 1)" 2>$null }
 if (-not $py -or $LASTEXITCODE -ne 0) {
-  Write-Host "✗ Python 3.10 이상이 없습니다 (python.org 설치본 권장, 설치 때 'Add to PATH' 체크)." -ForegroundColor Red; exit 1
+  Write-Host "✗ Python 3.9 이상이 없습니다 (python.org 설치본 권장, 설치 때 'Add to PATH' 체크)." -ForegroundColor Red; exit 1
 }
 
 # 플러그인 훅은 python3 로 돈다. 윈도우의 python3 는 흔히 MS 스토어 안내용 스텁이라 훅이 조용히 실패한다.

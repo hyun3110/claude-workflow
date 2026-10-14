@@ -18,8 +18,8 @@ import sys
 import tempfile
 from pathlib import Path
 
-if sys.version_info < (3, 10):
-    sys.exit(f"✗ Python 3.10 이상이 필요하다 (지금 {sys.version.split()[0]}).")
+if sys.version_info < (3, 9):
+    sys.exit(f"✗ Python 3.9 이상이 필요하다 (지금 {sys.version.split()[0]}).")
 sys.stdout.reconfigure(encoding="utf-8")  # 윈도우 콘솔(cp949)에서 한글이 깨지지 않게
 
 REPO = Path(__file__).resolve().parent.parent

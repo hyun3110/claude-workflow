@@ -22,18 +22,24 @@ irm https://raw.githubusercontent.com/hyun3110/claude-workflow/main/install/get.
 curl -fsSL https://raw.githubusercontent.com/hyun3110/claude-workflow/main/install/get.sh | bash
 ```
 
-홈 폴더의 `claude-workflow` 에 이 저장소를 받고 설치까지 한다(이미 있으면 `git pull` 후 다시 설치 = 업데이트). 준비물이 빠졌으면 무엇을 깔아야 하는지 알려 주고 멈춘다.
-끝나면 **Claude Code(데스크톱 앱이면 앱)를 완전히 껐다 켜고** "스킬 확인해" 라고 말한다 → ✓/✗ 표가 나온다.
+이 한 줄이 순서대로 한다:
+1. **빠진 준비물을 설치** — Claude Code CLI(공식 설치 스크립트) · Git · Python 3.9+ (윈도우는 winget, 맥은 Command Line Tools 설치 창). 이미 있으면 건너뛴다
+2. 홈 폴더의 `claude-workflow` 에 이 저장소를 받는다(이미 있으면 `git pull` = 업데이트)
+3. 설치한다
+
+받는 사람이 할 일: 윈도우는 Git 설치 때 **관리자 확인 창에서 "예"**, 맥은 처음 한 번 **Command Line Tools 설치 창에서 "설치"** 후 같은 한 줄을 다시 붙여 넣기. 끝나면 **Claude Code(데스크톱 앱이면 앱)를 켜서 — 처음이면 로그인 — "스킬 확인해"** → ✓/✗ 표가 나온다. 자동 설치가 안 된 준비물이 있으면 직접 설치 링크를 알려 주고 멈춘다.
+
+데스크톱 앱만 쓰는 사람도 이 한 줄이 CLI 를 깔아 준다(데스크톱 앱은 터미널 `claude` 명령을 만들지 않는다). 설치 결과는 데스크톱 앱에도 그대로 적용된다.
 
 > **`claude-workflow` 폴더는 지우거나 옮기지 않는다.** `workflow` 플러그인이 이 폴더를 직접 읽는다.
 
-**준비물**
+**준비물** (한 줄이 자동으로 설치 — 수동으로 할 때만 참고)
 
-| 필요 | 비고 |
+| 필요 | 수동 설치 |
 |---|---|
-| Claude Code **CLI** + 로그인 | 윈도우 `irm https://claude.ai/install.ps1 \| iex` · 맥은 [설치 문서](https://code.claude.com/docs/en/setup). **데스크톱 앱만 쓰는 사람도 설치 때문에 CLI 가 필요하다**(데스크톱 앱은 터미널 `claude` 명령을 만들지 않는다). 설치가 끝나면 데스크톱 앱에도 그대로 적용된다 |
+| Claude Code **CLI** | 윈도우 `irm https://claude.ai/install.ps1 \| iex` · 맥 `curl -fsSL https://claude.ai/install.sh \| bash` |
 | Git | 윈도우 `winget install Git.Git` (Claude Code 훅이 Git Bash 로 돈다) · 맥 `xcode-select --install` |
-| Python 3.10+ | 윈도우 `winget install Python.Python.3.12` 또는 python.org(설치 때 *Add to PATH* 체크) · 맥 `brew install python` |
+| Python 3.9+ | 윈도우 `winget install Python.Python.3.12` 또는 python.org(설치 때 *Add to PATH* 체크) · 맥은 Command Line Tools 의 python3 로 충분 |
 
 **선택** (없어도 설치는 된다)
 

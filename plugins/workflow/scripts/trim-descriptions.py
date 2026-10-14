@@ -299,7 +299,7 @@ def selftest() -> int:
         assert c.read_text(encoding="utf-8") == "---\n" + DMI_LINE + "---\nno frontmatter\n"
         # 리뷰 반영(2026-10-13): CRLF·뒤 주석·여러 줄 값·끝 줄바꿈 없음·재설치 후 낡은 백업
         for fm in ("disable-model-invocation: true # x\n", "disable-model-invocation: true\r\n"):
-            p.write_text("---\nname: x\n" + fm + "---\nb\n", encoding="utf-8", newline="")
+            p.write_bytes(("---\nname: x\n" + fm + "---\nb\n").encode("utf-8"))  # 줄바꿈 그대로 (3.9 호환)
             assert hide_one(p, dry=False) == "이미 숨김"
         p.write_text("---\nname: x\ndisable-model-invocation:\n  false\n---\nb\n", encoding="utf-8")
         hide_one(p, dry=False)

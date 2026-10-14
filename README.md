@@ -10,15 +10,30 @@ Claude Code 를 이렇게 일하게 만드는 설정 묶음이다:
 
 규칙 원문은 [`rules/workflow-rules.md`](rules/workflow-rules.md).
 
-## 설치
+## 설치 — 한 줄
 
-**선행 조건**
+```powershell
+# 윈도우 (PowerShell)
+irm https://raw.githubusercontent.com/hyun3110/claude-workflow/main/install/get.ps1 | iex
+```
+
+```bash
+# 맥·리눅스 (터미널)
+curl -fsSL https://raw.githubusercontent.com/hyun3110/claude-workflow/main/install/get.sh | bash
+```
+
+홈 폴더의 `claude-workflow` 에 이 저장소를 받고 설치까지 한다(이미 있으면 `git pull` 후 다시 설치 = 업데이트). 준비물이 빠졌으면 무엇을 깔아야 하는지 알려 주고 멈춘다.
+끝나면 **Claude Code(데스크톱 앱이면 앱)를 완전히 껐다 켜고** "스킬 확인해" 라고 말한다 → ✓/✗ 표가 나온다.
+
+> **`claude-workflow` 폴더는 지우거나 옮기지 않는다.** `workflow` 플러그인이 이 폴더를 직접 읽는다.
+
+**준비물**
 
 | 필요 | 비고 |
 |---|---|
-| [Claude Code](https://docs.claude.com/claude-code) | 로그인까지 |
-| Git | 윈도우는 Git for Windows (Claude Code 훅이 Git Bash 로 돈다) |
-| Python 3.10+ | 윈도우는 python.org 설치본, 설치 때 *Add to PATH* 체크 |
+| Claude Code **CLI** + 로그인 | 윈도우 `irm https://claude.ai/install.ps1 \| iex` · 맥은 [설치 문서](https://code.claude.com/docs/en/setup). **데스크톱 앱만 쓰는 사람도 설치 때문에 CLI 가 필요하다**(데스크톱 앱은 터미널 `claude` 명령을 만들지 않는다). 설치가 끝나면 데스크톱 앱에도 그대로 적용된다 |
+| Git | 윈도우 `winget install Git.Git` (Claude Code 훅이 Git Bash 로 돈다) · 맥 `xcode-select --install` |
+| Python 3.10+ | 윈도우 `winget install Python.Python.3.12` 또는 python.org(설치 때 *Add to PATH* 체크) · 맥 `brew install python` |
 
 **선택** (없어도 설치는 된다)
 
@@ -29,26 +44,18 @@ Claude Code 를 이렇게 일하게 만드는 설정 묶음이다:
 | ffmpeg · yt-dlp | `watch` 영상 분석 |
 | Obsidian 볼트 | `km` 지식관리 |
 
-**설치**
+**직접 받아서 설치** (한 줄 대신)
 
 ```bash
-git clone https://github.com/hyun3110/claude-workflow.git   # 비공개 저장소 — 초대받은 GitHub 계정으로
-cd claude-workflow
+git clone https://github.com/hyun3110/claude-workflow.git ~/claude-workflow
+cd ~/claude-workflow
+powershell -ExecutionPolicy Bypass -File install\install.ps1   # 윈도우
+bash install/install.sh                                        # 맥·리눅스
 ```
 
-```powershell
-# 윈도우
-powershell -ExecutionPolicy Bypass -File install\install.ps1
-```
+데스크톱 앱은 일반(로컬) 세션으로 쓴다 — WSL 세션에서는 플러그인이 동작하지 않는다(Claude Code 문서).
 
-```bash
-# 맥·리눅스
-bash install/install.sh
-```
-
-끝나면 **Claude Code 를 완전히 껐다 켜고** "스킬 확인해" 라고 말한다 → ✓/✗ 표가 나온다.
-
-**업데이트**: `git pull` 후 설치 스크립트를 다시 돌린다(여러 번 돌려도 안전, 중간에 실패해도 다시 돌리면 이어서 한다). 작업 규칙·`worker`·`workflow` 플러그인·스킬 통합 설정이 새 판으로 바뀐다. 다른 플러그인은 Claude Code 가 스스로 업데이트하고, 그때 숨김·합침이 풀리면 세션 시작 때 알림이 뜬다 → 설치 스크립트를 다시 돌린다.
+**업데이트**: 같은 한 줄을 다시 붙여 넣는다(= `git pull` 후 설치 스크립트 재실행). 여러 번 돌려도 안전하고, 중간에 실패해도 다시 돌리면 이어서 한다. 작업 규칙·`worker`·`workflow` 플러그인·스킬 통합 설정이 새 판으로 바뀐다. 다른 플러그인은 Claude Code 가 스스로 업데이트하고, 그때 숨김·합침이 풀리면 세션 시작 때 알림이 뜬다 → 설치 스크립트를 다시 돌린다.
 
 ## 설치가 바꾸는 것
 
